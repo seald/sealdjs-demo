@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script type='text/javascript' src="./index.js"></script>
+    <script type='text/javascript' src="https://api.seald.io/dali/sealdSDK.js"></script>
+    <script type='text/javascript' src="../node_modules/file-saver/dist/FileSaver.min.js"></script>
+    <script type='text/javascript' src="https://unpkg.com/file-saver@2.0.1/dist/FileSaver.min.js"></script>
+</header>
+<body>
+<div>
+    Choose a file to seal:
+    <br>
+    <input type="file" id="fileInput">
+    <br><br>
+    <button onclick="clickedSeal()">seal it !</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    Seal a mail:
+    <br>
+    From: <input type="text" id="mailFrom">
+    <br>
+    To: <input type="text" id="mailTo"> (only on mail)
+    <br>
+    Subject: <input type="text" id="mailSubject">
+    <br><br>
+    <textarea rows="4" cols="50" id="mailBody"></textarea>
+    <br><br>
+    <button onclick="clickedMailSeal()">seal it !</button>
+</div>
+<br><br>
+<p id="errorMessage" style="display: none">We could not encrypt it...</p>
+<button id="dlButton" onclick="clickedDownload()" style="display: none">Download</button>
+</body>
+</html>
